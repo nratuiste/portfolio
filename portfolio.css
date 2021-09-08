@@ -1,0 +1,107 @@
+/*import google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+
+body {
+	background-color: #abe1fd;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+hr {
+	width: 85%;
+}
+
+/*jumbotron*/
+.jumboBg {
+	height: 100vh;
+	background: url(./media/banner.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: 'Montserrat', sans-serif; 
+}
+
+/*jumbotron font editing*/
+.display-4, .display-1 {
+	text-shadow: 2px 2px black;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.text-justify {
+	text-indent: 50px;
+}
+
+.shadowed {
+	text-shadow: 2px 2px black;
+}
+
+/*projects card*/
+.projectCard {
+	min-height: 100%;
+}
+
+/*timeline hover*/
+.cardBody {
+	transition: all 0.5s;
+	transform: rotateY(0deg);
+}
+
+.hoverTrigger:hover .cardBody {
+	transform: all 0.5s;
+	transform: rotateY(180deg);
+}
+
+@media {
+	.hoverTrigger:hover .cardBody {
+		transition: all 0.5s;
+		transform: rotateY(360deg);
+	}
+}
+
+.hoverTrigger:hover .cardBody .unflip {
+	display: none;
+}
+
+.cardBody .flip {
+	display: none;
+}
+
+.hoverTrigger:hover .cardBody .flip {
+	display: block;
+}
+
+/*spinning divider*/
+.spin {
+	animation-name: spin;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	text-shadow: 2px 2px black;
+}
+
+.spin2 {
+	animation-name: spin2;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	text-shadow: 2px 2px black;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes spin2 {
+    from {
+        transform:rotate(360deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}
