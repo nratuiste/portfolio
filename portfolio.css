@@ -105,3 +105,10 @@ hr {
         transform:rotate(0deg);
     }
 }
+
+/*font size adjustments*/
+@media screen and (max-width: 800px) {
+	.adjust {
+		font-size: 40px;
+	}
+}
